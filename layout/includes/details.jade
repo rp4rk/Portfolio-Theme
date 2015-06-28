@@ -1,10 +1,14 @@
 
-if site.posts.length > 0
-  #recent-posts.row
-    each post in site.posts.sort('date', -1).limit(5).toArray()
-      .recent-post-item.four.columns
-        #post(style="background: url('img/" + post.title + ".jpg');")
-          .details
-            a(href=config.root + post.path)= post.title
-            if post.date
-              time(datetime=post.date.toJSON())= date(post.date, date_format)
+#details.container
+  .four.columns.info
+    i.fa.fa-user
+    h1 About
+    p I am a recent graduate who specializes in bespoke solutions for front end web development, creating cutting-edge responsive experiences for a range of devices.
+  .four.columns.info
+    i.fa.fa-certificate
+    h1 Qualifications
+    p Graduated with first class honors in Interactive Media Arts, Adobe Certified Associate for a range of Adobe software, recipent of
+  .four.columns.info
+    i.fa.fa-code
+    h1 Skills
+    p HTML5, CSS3, Javascript, jQuery, git and tinkerer in node.js, php, and other backend technologies.

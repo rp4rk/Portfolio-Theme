@@ -1,0 +1,83 @@
+@import "skeleton";
+@import "normalize";
+
+
+//Mixins
+@mixin blur($px: 0) {
+    -webkit-filter: blur(#{$px}px) !important;
+    -ms-filter: blur(#{$px}px) !important;
+    -moz-filter: blur(#{$px}px) !important;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+}
+
+.name {
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline;
+	color: $dark-grey;
+	font-size: 8vmin;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sub {
+  color: darken($light-grey, 30%);
+  font-size: 4vmin;
+  font-family: $body;
+  letter-spacing: 1px;
+}
+
+#post {
+  height: 33vh;
+  width: 30vw;
+  overflow: hidden;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  
+  
+  &:hover:before {
+    @include blur(3);
+  }
+  
+  //Psuedo element
+  &:before {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-color: rgba(0,0,0, 0.8);
+    content: ' ';
+    @include blur(0);
+    transition: all 0.1s ease;
+  }
+}
+
+#menu-outer {
+	padding: 1vw;
+}
+
+.menu-inner {
+	float: right;
+	padding: 0.3em;
+	a {
+		display: inline-block;
+		margin: 0.1em 0.5em 0 0.3em;
+	}
+}
+
+#recent-posts .recent-post-item {
+	margin-bottom: 0.3em;
+	a {
+		margin-right: 1em;
+	}
+}

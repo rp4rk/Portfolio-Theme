@@ -1,6 +1,10 @@
 @import "skeleton";
 @import "normalize";
 
+//Set to the superior box size model
+* {
+  box-sizing: border-box;
+}
 
 //Mixins
 @mixin blur($px: 0) {
@@ -11,59 +15,44 @@
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
 }
 
+//Navbar
+#menu-outer {
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+
+#title {
+  display: inline;
+  float: left;
+}
+
 .name {
-	text-transform: uppercase;
-	font-weight: 700;
-	display: inline;
-	color: $dark-grey;
-	font-size: 8vmin;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  text-transform: uppercase;
+  display: inline;
+  float: left;
+  margin: 0;
+  font-weight: 700;
+  color: $dark-grey;
+  font-size: 8vmin;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .sub {
   color: darken($light-grey, 30%);
+  float: left;
+  clear: both;
   font-size: 4vmin;
+  display: inline;
   font-family: $body;
   letter-spacing: 1px;
-}
 
-#post {
-  height: 33vh;
-  width: 30vw;
-  overflow: hidden;
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-  
-  
-  &:hover:before {
-    @include blur(3);
-  }
-  
-  //Psuedo element
-  &:before {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: inherit;
-    background-size: cover;
-    background-color: rgba(0,0,0, 0.8);
-    content: ' ';
-    @include blur(0);
-    transition: all 0.1s ease;
-  }
-}
-
-#menu-outer {
-	padding: 1vw;
 }
 
 .menu-inner {
@@ -75,9 +64,74 @@
 	}
 }
 
+
+//Posts
 #recent-posts .recent-post-item {
 	margin-bottom: 0.3em;
 	a {
-		margin-right: 1em;
+
 	}
+}
+
+#post {
+  $post-color: darken(white, 10%);
+  $shadow: rgba(0,0,0, 1);
+  
+  height: 33vh;
+  display: flex;
+  overflow: hidden;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0px 0px 3px $shadow;
+  
+  &:hover .details {
+    background-color: transparent;
+  }
+  
+  time { display: block; margin-top: 10px;};
+  
+  color: $post-color;
+  a {
+    color: $post-color;
+    &:hover { color: white };
+  }
+  
+  .details {
+    padding: 20px 0 20px 0;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.5);
+  }
+  
+  &:hover:before {
+    @include blur(3);
+    transform: scale(1.2, 1.2);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.35);
+  }
+  
+  //Psuedo element
+  &:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    content: '';
+    @include blur(0);
+    transition: all 0.1s ease;
+  }
+}
+
+
+//Skeleton Adjustments
+.row {
+  padding: 0 10px 0 10px;
 }

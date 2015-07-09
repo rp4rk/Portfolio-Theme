@@ -1,9 +1,12 @@
 if site.posts.length > 0
-  #recent-posts.row
-    each post in site.posts.sort('date', -1).limit(5).toArray()
-      .recent-post-item.four.columns
-        #article(style="background: url('img/" + post.title + ".jpg');")
-          .details
-            a(href=config.root + post.path)= post.title
-            if post.date
-              time(datetime=post.date.toJSON())= date(post.date, date_format)
+  #recent-posts.container
+    div.row
+      h1 Previous Work
+      div.eight.columns#projects
+        each post in site.posts.sort('date', -1).limit(5).toArray()
+          .recent-post-item.six.columns
+            #article(style="background: url('img/" + post.title + ".jpg');")
+              .details
+                a(href=config.root + post.path)= post.title
+                if post.date
+                  time(datetime=post.date.toJSON())= date(post.date, date_format)

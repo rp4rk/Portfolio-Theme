@@ -84,9 +84,15 @@
 //Posts
 #recent-posts .recent-post-item {
 	margin-bottom: 0.3em;
-	a {
+	
+    //localized margin fix
+    margin: 0 0 0 0;
+}
 
-	}
+//Projects
+#projects {
+  margin: 0;
+  display: flex;
 }
 
 #article {
@@ -98,6 +104,7 @@
     border: 2px solid;
     padding: 5px 10px 5px 10px;
   }
+
   
   height: 33vh;
   border-radius: 3px;

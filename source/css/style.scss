@@ -61,6 +61,8 @@
 	a {
 		display: inline-block;
 		margin: 0.1em 0.5em 0 0.3em;
+        border: 2px solid;
+        padding: 5px 10px 5px 10px;
 	}
 }
 
@@ -87,11 +89,18 @@
 	}
 }
 
-#post {
+#article {
   $post-color: darken(white, 10%);
   $shadow: rgba(0,0,0, 1);
   
+  //link styling
+  a {
+    border: 2px solid;
+    padding: 5px 10px 5px 10px;
+  }
+  
   height: 33vh;
+  border-radius: 3px;
   display: flex;
   overflow: hidden;
   background-size: cover !important;
@@ -141,6 +150,22 @@
     content: '';
     @include blur(0);
     transition: all 0.1s ease;
+  }
+}
+
+//Footer
+#footer {
+  background-color: $dark-grey;
+  height: 50px;
+  color: $light-grey;
+  text-align: center;
+  line-height: 50px;
+  bottom: 0;
+  margin-top: 2rem;
+  
+  i {
+    margin: 0 3px 0 3px;
+    font-size: 3rem;
   }
 }
 

@@ -165,6 +165,14 @@
   }
 }
 
+//Contact Form
+label {
+  display: block;
+  &:nth-child(n+2) {
+    margin-top: 25px;
+  }
+}
+
 //Footer
 #footer {
   background-color: $dark-grey;
@@ -180,6 +188,7 @@
     font-size: 3rem;
   }
 }
+
 
 
 //Skeleton Adjustments

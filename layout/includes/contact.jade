@@ -1,0 +1,17 @@
+
+div.container
+  div.row
+    h1 Contact
+  div.row
+    
+    div.six.columns
+      p You can contact me using the form to the right, alternatively I'm available via social media 
+    div.six.columns
+      form(action='//formspree.io/parky.fp@gmail.com', method='POST')
+          label Name:
+          input(type='text', name='name', placeholder='Your Name')  
+          label Email Address:
+          input(type='email', name='_replyto', placeholder='Your Email')
+          label Message:
+          textarea.u-full-width(name='message', placeholder='Your Message')
+          input(type='submit', value='Send')

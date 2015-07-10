@@ -5,7 +5,8 @@ language: en
 # main menu navigation
 menu:
   Home: /
-  Archives: /archives
+  Work: /archives
+  Contact: /contact
 
 # can include these pages on the front
 index_pages:

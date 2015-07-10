@@ -67,6 +67,18 @@
 }
 
 //Details
+#details {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+ 
+  
+  @media (#{$bp-larger-than-phablet}) {
+   height: 80vh;
+  }
+}
 
 .info {
   i {
@@ -83,18 +95,18 @@
 
 //Posts
 #recent-posts .recent-post-item {
-	margin-bottom: 0.3em;
-	a {
-
-	}
+	margin-bottom: 20px;
 }
 
 #article {
   $post-color: darken(white, 10%);
   $shadow: rgba(0,0,0, 1);
   
-  //link styling
-  a {
+  //Text Styling
+  h5 {
+    display: inline;
+    font-weight: 700;
+    font-size: 18px;
     border: 2px solid;
     padding: 5px 10px 5px 10px;
   }
@@ -172,5 +184,6 @@
 
 //Skeleton Adjustments
 .row {
-  padding: 0 10px 0 10px;
+  padding: 0 20px 0 20px;
 }
+

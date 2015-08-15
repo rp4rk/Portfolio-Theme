@@ -1,4 +1,3 @@
-
 - var pageTitle = page.title || config.subtitle || ''
 - if (is_archive()) pageTitle = 'Archives'
 - if (is_tag()) pageTitle = 'Tag: ' + page.tag
@@ -23,7 +22,8 @@ html(lang=config.language)
     #menu-outer
       div.container
         #title
-          h1.name= config.title
+          a(href='/')
+            h1.name= config.title
         #nav.menu-inner
           each url, label in theme.menu
             a(href=url)= label

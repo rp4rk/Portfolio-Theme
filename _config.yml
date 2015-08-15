@@ -1,12 +1,12 @@
-
 # html lang
 language: en
 
 # main menu navigation
 menu:
-  Home: /
-  Work: /archives
-  Contact: /contact
+  Home: '#home'
+  Work: '#work'
+  Feedback: '#feedback'
+  Contact: '#contact' 
 
 # can include these pages on the front
 index_pages:

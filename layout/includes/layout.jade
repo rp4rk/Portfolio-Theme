@@ -13,26 +13,32 @@ html(lang=config.language)
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
     meta(name='author', content='Ryan Park')
+    meta(name='theme-color', content='#ffffff')
     title= pageTitle
     each url in theme.stylesheets
       link(rel='stylesheet', href=url)
     link(rel="icon", href=config.root + 'img/favicon.png')
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    link(rel="stylesheet", href=config.root + "css/ionicons.min.css")
   body
     #menu-outer
-      #title
-        h1.name= config.title
-        h2.sub= config.description
-      #nav.menu-inner
-        each url, label in theme.menu
-          a(href=url)= label
+      div.container
+        #title
+          h1.name= config.title
+        #nav.menu-inner
+          each url, label in theme.menu
+            a(href=url)= label
     #content-outer
       #content-inner
         if body
           div!= body
         else
           block content
-    #footer
-      i.fa.fa-github
-      i.fa.fa-twitter
-      i.fa.fa-user
+    #footer.darkdiv
+      h5.footernote Powered by Hexo, Styled by Ryan Park
+      div#contacts
+        a(href="http://www.github.com/" + theme.github)
+          i.icon.ion-social-github
+        a(href="http://www.twitter.com/" + theme.twitter)
+          i.icon.ion-social-twitter
+        a(href="http://www.codepen.io/" + theme.codepen)
+          i.icon.ion-social-codepen-outline

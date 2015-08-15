@@ -27,7 +27,7 @@
 
 // Variables
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
 
 //Fonts
@@ -43,7 +43,7 @@ $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Colors
 $light-grey: #e1e1e1 !default;
-$dark-grey: #333 !default;
+$dark-grey: #444749 !default;
 $primary-color: #33c3f0 !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
@@ -193,7 +193,7 @@ body {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+  margin-top: 0 !important;
   margin-bottom: 2rem;
   font-weight: 300;
 }
@@ -260,6 +260,7 @@ input {
   &[type="submit"],
   &[type="reset"],
   &[type="button"] {
+		transition: 0.3s all ease-in-out;
     display: inline-block;
     color: $secondary-color;
     text-align: center;
@@ -273,15 +274,17 @@ input {
     font-size: 18px;
     font-family: $header;
     font-weight: 700;
-    border: 2px solid;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 12px 5px 12px;
+		border: 1px solid $dark-grey;
+		border-radius: 3px;
+
   }
 }
 
 .button:hover,
 button:hover {
-  color: lighten($dark-grey, 33.33%);
-  border-color: lighten($dark-grey, 33.3%);
+  color: white;
+	background-color: $dark-grey;
   outline: 0;
 }
 
@@ -289,9 +292,9 @@ input {
   &[type="submit"]:hover,
   &[type="reset"]:hover,
   &[type="button"]:hover {
-    color: lighten($dark-grey, 33.33%);
-    border-color: lighten($dark-grey, 33.3%);
-    outline: 0;
+    color: white;
+		background-color: $dark-grey;
+		outline: 0;
   }
 }
 

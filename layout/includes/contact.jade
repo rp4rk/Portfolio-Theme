@@ -1,11 +1,13 @@
 
-div.container
+div.container.spacing
   div.row
-    h1 Contact
+    h1.sectionhead Contact Me
   div.row
     
-    div.six.columns
-      p You can contact me using the form to the right, alternatively I'm available via social media 
+    div.six.columns.center
+      i.icon.ion-ios-email.circled
+      p
+        |  You can contact me using the form #[span.righttext to the right]#[span.belowtext below], alternatively I'm available via social media.
     div.six.columns
       form(action='//formspree.io/parky.fp@gmail.com', method='POST')
           label Name:

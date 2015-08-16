@@ -24,6 +24,34 @@ body {
 }
 
 //Utility Classes
+.post {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  span {
+    width: 100%;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  br{
+    display: none;
+  }
+}
+
+.post-img {
+  position: relative; 
+  margin: 0;
+  margin: 10px;
+}
+
+.post-img  img{
+  width: 100%;
+}
+
 .menu_highlight {
   background-color: #375e48;
   color: white;

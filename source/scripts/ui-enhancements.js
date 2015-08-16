@@ -18,7 +18,7 @@ $( document ).ready(function() {
     $(".menu-inner a").click(function(event) {
       event.preventDefault();
       
-      if (!$(this).hasClass("highlight")) {
+      if (!$(this).hasClass("menu_highlight")) {
 
         var target = $(this).attr("href").replace('/', '');
 
@@ -39,8 +39,8 @@ $( document ).ready(function() {
       watchedDivs.push([$(this).attr("href").replace('/', ''), 0, 0, this]);  
     });
     
-    //Highlight this here
-    $(watchedDivs[0][3]).addClass("highlight");
+    //menu_highlight this here
+    $(watchedDivs[0][3]).addClass("menu_highlight");
   
     //Check on scroll           
     $(window).scroll(function() {
@@ -58,10 +58,10 @@ $( document ).ready(function() {
       //Check what range we are in, highlight accordingly
       for (i=0; i<watchedDivs.length; i++) {
         if (scrollTop < watchedDivs[i][2] && scrollTop > watchedDivs[i][1]-90) {
-          $(watchedDivs[i][3]).addClass("highlight");
+          $(watchedDivs[i][3]).addClass("menu_highlight");
           
         } else {
-          $(watchedDivs[i][3]).removeClass("highlight");
+          $(watchedDivs[i][3]).removeClass("menu_highlight");
         }
       }
       

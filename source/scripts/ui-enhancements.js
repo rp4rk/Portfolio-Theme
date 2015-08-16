@@ -1,8 +1,17 @@
+//Get rid of hashes on page load
+var hashLoad = window.location.hash;
+history.pushState("", document.title, window.location.pathname);
+
 //When our site is ready
 $( document ).ready(function() {
-    //If page is just loading
-    if(window.location.hash) {
-      $(window).scrollTo(0, $(window).scrollTop()+200);
+    //Page load scroll
+    if (hashLoad) {
+      setTimeout(function() {
+        $(window).stop(true).scrollTo(hashLoad, {
+          duration: 500,
+          offset: -89
+        });
+      }, 500);
     }
     
     //Detect menu presses
@@ -35,7 +44,7 @@ $( document ).ready(function() {
   
     //Check on scroll           
     $(window).scroll(function() {
-      var scrollTop     = $(window).scrollTop();
+      var scrollTop = $(window).scrollTop();
       
       //Calculate distances
       for (i=0; i<watchedDivs.length; i++) {

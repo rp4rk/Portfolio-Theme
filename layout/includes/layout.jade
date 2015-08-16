@@ -42,3 +42,7 @@ html(lang=config.language)
           i.icon.ion-social-twitter
         a(href="http://www.codepen.io/" + theme.codepen)
           i.icon.ion-social-codepen-outline
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    if is_home()
+      each url in theme.scripts
+        script(src=url)

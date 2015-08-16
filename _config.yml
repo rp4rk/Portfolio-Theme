@@ -3,10 +3,8 @@ language: en
 
 # main menu navigation
 menu:
-  Home: '#home'
-  Work: '#work'
-  Feedback: '#feedback'
-  Contact: '#contact' 
+  Feedback: '/#feedback'
+  Contact: '/#contact' 
 
 # can include these pages on the front
 index_pages:
@@ -23,6 +21,10 @@ favicon: /favicon.png
 # loaded in the head
 stylesheets:
 - /css/style.css
+
+# scripts - loaded at end
+scripts:
+- /scripts/ui-enhancements.js
 
 # config sass
 node_sass:

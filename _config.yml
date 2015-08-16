@@ -3,6 +3,8 @@ language: en
 
 # main menu navigation
 menu:
+  Home: '/#details'
+  Work: '/#recent-posts'
   Feedback: '/#feedback'
   Contact: '/#contact' 
 
@@ -24,6 +26,7 @@ stylesheets:
 
 # scripts - loaded at end
 scripts:
+- /scripts/jquery.scrollTo.min.js
 - /scripts/ui-enhancements.js
 
 # config sass

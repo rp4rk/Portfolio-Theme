@@ -3,10 +3,10 @@ language: en
 
 # main menu navigation
 menu:
-  Home: '/#details'
-  Work: '/#recent-posts'
-  Feedback: '/#feedback'
-  Contact: '/#contact' 
+  Home: '#details'
+  Work: '#recent-posts'
+  Feedback: '#feedback'
+  Contact: '#contact' 
 
 # can include these pages on the front
 index_pages:
@@ -26,7 +26,7 @@ stylesheets:
 
 # scripts - loaded at end
 scripts:
-- /scripts/jquery.scrollTo.min.js
+- /scripts/navsync.min.js
 - /scripts/ui-enhancements.js
 
 # config sass

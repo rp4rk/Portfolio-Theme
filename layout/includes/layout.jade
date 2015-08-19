@@ -20,10 +20,10 @@ html(lang=config.language)
     link(rel="stylesheet", href=config.root + "css/ionicons.min.css")
   body
     #menu-outer
-      div.container
+      div.container.u-full-height.menu-container
         #title
           a(href='/')
-            h1.name= config.title
+            h1.name.u-full-height= config.title
         #nav.menu-inner
           each url, label in theme.menu
             a(href=url)= label

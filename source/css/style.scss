@@ -87,14 +87,15 @@ body {
   font-weight: 400;
 	text-align: center;
 	letter-spacing: 1px;
+  margin-bottom: 40px;
 	
-	//Underline
+// Underline
 	&:after {
 		content: ' ';
 		display: block;
 		width: 10%;
 		height: 2px;
-		margin-top: 10px;
+		margin-top: 20px;
 		background-color: $dark-grey;
 		margin-left: auto;
 		margin-right: auto;
@@ -103,14 +104,14 @@ body {
 }
 
 .darkdiv .sectionhead {
-	//Underline
+// Underline
 	&:after {
 		content: ' ';
 		z-index: 100;
 		display: block;
 		width: 10%;
 		height: 2px;
-		margin-top: 10px;
+		margin-top: 20px;
 		background-color: $light-grey;
 		margin-left: auto;
 		margin-right: auto;
@@ -126,7 +127,7 @@ body {
    display: none;
  }      
 
-@media (#{$bp-larger-than-phablet}) {
+@media (#{$bp-larger-than-tablet}) {
    .righttext {
      display: inline;
    }
@@ -151,13 +152,13 @@ body {
   box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
   transform: translateZ(0);
     
-	@media (#{$bp-larger-than-phablet}) {
+	@media (#{$bp-larger-than-tablet}) {
 		line-height: $header-height;
 	}
 }
 
 .menu-container {
-  @media (#{$bp-smaller-than-phablet}) {
+  @media (#{$bp-smaller-than-tablet}) {
 		display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,7 +182,7 @@ body {
   float: left;
 	width: 100%;
 	
-	@media (#{$bp-larger-than-phablet}) {
+	@media (#{$bp-larger-than-tablet}) {
 		width: auto;
     height: 100%;
 	}
@@ -204,18 +205,19 @@ body {
 	text-align: center;
 	width: 100%;
 	
-	@media (#{$bp-larger-than-phablet}) {
-    font-size: 5vw;
+	@media (#{$bp-larger-than-tablet}) {
+    font-size: 5vh;
 		text-align: left;
 		display: inline;
     line-height: $header-height;
 	}
+
 }
 
 .menu-inner {
+  font-size: 3.5vw;
   
-  
-	@media (#{$bp-larger-than-phablet}) {
+	@media (#{$bp-larger-than-tablet}) {
     height: 100%;
 		float: right;
     font-size: 1.2vw;
@@ -228,7 +230,7 @@ body {
 		margin: 0.1em 0.5em 0 0.3em;
 		padding: 5px 10px 5px 10px;
 		
-		@media (#{$bp-larger-than-phablet}) {
+		@media (#{$bp-larger-than-tablet}) {
 			padding: 14px 12px 14px 12px;
 		}
 	}
@@ -278,16 +280,14 @@ body {
 
 //Posts
 .portfolio-post:nth-child(n+2) {
-  @media (#{$bp-larger-than-phablet}) {
+
     &:before {
       content: ' ';
       display: block;
       width: 80%;
-      margin: 0 auto 0 auto;
-      margin-bottom: 20px;
+      margin: 20px auto 20px auto;
       height: 1px;
       background-color: $light-grey;
-    }
   }
 }
 
@@ -301,6 +301,10 @@ body {
   position: relative;
   height: 33vh;
   max-height: 200px;
+  
+  @media (#{$bp-smaller-than-tablet}) {
+    height: 100vh;
+  }
 }
 
 p.desc {
@@ -440,11 +444,21 @@ time.post-time {
 
 
 //Contact Form
+#contact {
+  @media (#{$bp-larger-than-tablet}) {
+    min-height: 80vh;
+  }
+}
+
 label {
   display: block;
   &:nth-child(n+2) {
     margin-top: 25px;
   }
+}
+
+input {
+  width: 100%;
 }
 
 //Client area 

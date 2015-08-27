@@ -3,19 +3,10 @@ language: en
 
 # main menu navigation
 menu:
-  Home: '#details'
-  Work: '#recent-posts'
-  Feedback: '#feedback'
-  Contact: '#contact' 
-
-# can include these pages on the front
-index_pages:
-- index
-- about
-- contact
-
-# feed
-atom: /atom.xml
+  Home: '/#details'
+  Work: '/#recent-posts'
+  Feedback: '/#feedback'
+  Contact: '/#contact'
 
 # Miscelaneous
 favicon: /favicon.png
@@ -24,12 +15,12 @@ favicon: /favicon.png
 stylesheets:
 - /css/style.css
 
-# scripts - loaded at end
+# scripts - loaded before end of body
 scripts:
 - /scripts/navsync.min.js
 - /scripts/ui-enhancements.js
 
-# config sass
+# sass configuration
 node_sass:
   outputStyle: nested
   precision: 5

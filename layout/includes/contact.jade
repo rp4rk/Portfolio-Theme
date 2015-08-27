@@ -1,14 +1,9 @@
 
 div#contact.container.spacing
   div.row
-    h1.sectionhead Contact Me
+    h1.sectionhead Get In Touch
   div.row
-    
-    div.six.columns.center
-      i.icon.ion-ios-email.circled
-      p
-        |  You can contact me using the form #[span.righttext to the right]#[span.belowtext below], alternatively I'm available via social media.
-    div.six.columns
+    div.twelve.columns
       form(action='//formspree.io/parky.fp@gmail.com', method='POST')
           label Name:
           input(type='text', name='name', placeholder='Your Name')  
@@ -16,4 +11,4 @@ div#contact.container.spacing
           input(type='email', name='_replyto', placeholder='Your Email')
           label Message:
           textarea.u-full-width(name='message', placeholder='Your Message')
-          input(type='submit', value='Send')
+          input(type='submit', value='Send me a message!')
